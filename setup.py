@@ -9,6 +9,7 @@ import subprocess
 import sys
 import numpy
 
+from setuptools import Extension, setup
 from setuptools import setup, Extension
 from setuptools import Extension, find_packages, setup
 from torch.utils import cpp_extension
@@ -88,6 +89,12 @@ setup(
     ],
     # ...
 )
+
+my_extension = Extension('my_extension', sources=['my_extension.c'], include_dirs=['/path/to/my_extension'])
+
+setup(name='my_package',
+      version='1.0',
+      ext_modules=[my_extension])
 
 extensions.extend(
     [
