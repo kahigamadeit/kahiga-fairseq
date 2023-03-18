@@ -85,7 +85,7 @@ extensions = [
 setup(
     # ...
     ext_modules=[
-        Extension('my_extension', sources=['my_extension.c'], include_dirs=[numpy.get_include(/home/kahigamadeit/.local/lib/python3.8/site-packages/numpy/core/include)])
+        Extension('my_extension', sources=['my_extension.c'], include_dirs=[numpy.get_include('/home/kahigamadeit/.local/lib/python3.8/site-packages/numpy/core/include')])
     ],
     # ...
 )
